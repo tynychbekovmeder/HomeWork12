@@ -21,9 +21,9 @@ public class Dolphin implements Animal {
 
     @Override
     public String toString() {
-        return "Dolphin:" +
-                "name:" + name + '\'' +
-                "age=" + age;
+        return "\nDolphin:" +
+                "\n     name:" + name + '\'' +
+                "\n     age=" + age;
     }
 
     public String getName() {

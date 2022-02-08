@@ -6,10 +6,14 @@ public class HomeWork12Application {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Person person = context.getBean("person", Person.class);
+        Person me = context.getBean("me", Person.class);
+        Person myFriend = context.getBean("myFriend", Person.class);
 
-        System.out.println(person);
-        person.getAnimal().animalPlus();
-        person.getAnimal().animalMinus();
+        System.out.println(me);
+        me.getAnimal().animalPlus();
+        me.getAnimal().animalMinus();
+        System.out.println(myFriend);
+        myFriend.getAnimal().animalPlus();
+        myFriend.getAnimal().animalMinus();
     }
 }

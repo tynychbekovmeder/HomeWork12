@@ -11,14 +11,25 @@
 
     <bean id="dolphin"
           class="com.example.homework12.Dolphin">
-        <constructor-arg name="name" value="${Dolphin.name}"/>
+        <constructor-arg name="name" value= "${Dolphin.name}"/>
         <constructor-arg name="age" value="${Dolphin.age}"/>
     </bean>
 
-    <bean id="person"
+    <bean id="me"
           class="com.example.homework12.Person">
         <constructor-arg name="name" value="${Person.name}"/>
         <constructor-arg name="age" value="${Person.age}"/>
         <constructor-arg name="animal" ref="dolphin"/>
+    </bean>
+    <bean id = "dog"
+          class="com.example.homework12.Dog">
+        <constructor-arg name= "name" value="${Dog.name}"/>
+        <constructor-arg name = "age" value="${Dog.age}"/>
+    </bean>
+    <bean id = "myFriend"
+          class="com.example.homework12.Person">
+        <constructor-arg name = "name" value="${MyFriend.name}"/>
+        <constructor-arg name = "age" value="${MyFriend.age}"/>
+        <constructor-arg ref="dog"/>
     </bean>
 </beans>

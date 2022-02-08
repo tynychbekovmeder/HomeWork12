@@ -1,22 +1,22 @@
 package com.example.homework12;
 
-public class Person {
-    private Animal animal;
+public class Dog implements Animal{
+    @Override
+    public void animalPlus() {
+        System.out.println("Защищает дом");
+    }
+
+    @Override
+    public void animalMinus() {
+        System.out.println("Кусается!");
+    }
+
     private String name;
     private int age;
 
-    public Person(Animal animal, String name, int age) {
-        this.animal = animal;
+    public Dog(String name, int age) {
         this.name = name;
         this.age = age;
-    }
-
-    public Animal getAnimal() {
-        return animal;
-    }
-
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
     }
 
     public String getName() {
@@ -37,9 +37,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return  "\nname: " + name + '\'' +
-                "\nage: " + age +
-                "\nanimal: " + animal;
-
+        return "\nDog: " +
+                "\n     name: " + name + '\'' +
+                "\n     age=" + age;
     }
 }
