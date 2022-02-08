@@ -6,12 +6,10 @@ public class HomeWork12Application {
 
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Dolphin dolphin = context.getBean("dolphin", Dolphin.class);
         Person person = context.getBean("person", Person.class);
 
-        System.out.println("person's name: "+person.getName()+"\nperson's age: "+person.getAge());
-        System.out.println("\nanimal's name: "+dolphin.getName()+"\nanimal's age: "+dolphin.getAge());
-        dolphin.animalPlus();
-        dolphin.animalMinus();
+        System.out.println(person);
+        person.getAnimal().animalPlus();
+        person.getAnimal().animalMinus();
     }
 }

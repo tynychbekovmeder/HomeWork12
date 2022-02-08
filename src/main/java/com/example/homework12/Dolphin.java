@@ -19,6 +19,13 @@ public class Dolphin implements Animal {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "Dolphin:" +
+                "name:" + name + '\'' +
+                "age=" + age;
+    }
+
     public String getName() {
         return name;
     }
